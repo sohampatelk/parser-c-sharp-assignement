@@ -1,0 +1,11 @@
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\bin\Debug\netcoreapp3.1\parser c# assignment.exe
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\bin\Debug\netcoreapp3.1\parser c# assignment.deps.json
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\bin\Debug\netcoreapp3.1\parser c# assignment.runtimeconfig.json
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\bin\Debug\netcoreapp3.1\parser c# assignment.runtimeconfig.dev.json
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\bin\Debug\netcoreapp3.1\parser c# assignment.dll
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\bin\Debug\netcoreapp3.1\parser c# assignment.pdb
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\obj\Debug\netcoreapp3.1\parser c# assignment.csprojAssemblyReference.cache
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\obj\Debug\netcoreapp3.1\parser c# assignment.AssemblyInfoInputs.cache
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\obj\Debug\netcoreapp3.1\parser c# assignment.AssemblyInfo.cs
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\obj\Debug\netcoreapp3.1\parser c# assignment.dll
+C:\Users\soham\Desktop\HTML-CSS-JAVASCRIPT\c#\parser c# assignment\obj\Debug\netcoreapp3.1\parser c# assignment.pdb
