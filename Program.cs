@@ -15,57 +15,72 @@ A while-loop menu: the menu will continue to display until,
 option 3 is entered as input, at that point the program will terminate.
 */
 using System;
+using System.Linq;
 using System.IO;
 namespace parser_c__assignment
 {
     class Program
     {
         static void Main(string[] args)
-        {   
-
-            System.Console.WriteLine("Enter the Option: ");
+        {
             System.Console.WriteLine("Enter the file name for, press key number 1");
-            System.Console.WriteLine("Enter the string which you want to add, press key number 2");
+            System.Console.WriteLine("Enter the string which you want to remove, press key number 2");
             System.Console.WriteLine("Exit from the loop , press key number 3");
-            
-            string option = Console.ReadLine();
-            string fileName;
-            string fileString;
 
-            while (option != "3"){
+            bool endLoop = false;
+            string fileName = "";
+            string fileString = "";
 
-            switch(option){
-                case "1":
-                    Console.WriteLine("Prompt: Enter a file name:");
-                    fileName = Console.ReadLine();
-                    if(!File.Exists(fileName)){
-                        System.Console.WriteLine("Same File name does not exist..");
-                        goto case "1";
-                    }
-                    break;  
-                case "2": 
-                    
-                    Console.WriteLine("Prompt: Enter a string which you want to add:");
-                    fileString = Console.ReadLine();
-                    File.WriteAllText(path, fileString);
-                    System.Console.WriteLine("in case 2 and file edited,,,");
-                    break;
-                    
-                case "3": 
-                    Console.WriteLine("Exiting the loop");
-                    break;
-                default:
-                    Console.WriteLine("Enter invalid entry");
-                    break;
-                
+
+            while (!endLoop)
+            {
+                Console.WriteLine("Enter an option:");
+                string option = Console.ReadLine();
+
+                switch (option)
+                {
+                    case "1":
+                        Console.WriteLine("Prompt: Enter a file name:");
+                        fileName = Console.ReadLine();
+                        if (!File.Exists(fileName))
+                        {
+                            System.Console.WriteLine("Same File name does not exist..");
+                        }
+                        break;
+                    case "2":
+
+                        Console.WriteLine("Prompt: Enter a string which you want to remove:");
+                        fileString = Console.ReadLine();
+                        if (File.Exists(fileName))
+                        {
+                            string readText = File.ReadAllText(fileName);
+                            string[] split = readText.Split(fileString);
+                            string updatedString = "";
+                            System.Console.WriteLine("in case 2 in if loop");
+                            foreach (string e in split)
+                            {
+                                updatedString = updatedString + e + " ";  //update string with blank space
+                            }
+                            File.WriteAllText(fileName, updatedString);
+                            //System.Console.WriteLine("text removed..");
+                        }
+                        //System.Console.WriteLine("in case 2 and file edited..loop finished.");
+                        break;
+
+                    case "3":
+                        endLoop = true;
+                        Console.WriteLine("Exiting the loop");
+                        break;
+                    default:
+                        Console.WriteLine("Enter invalid entry");
+                        System.Console.WriteLine("Enter the Option: ");
+                        System.Console.WriteLine("Enter the file name for, press key number 1");
+                        System.Console.WriteLine("Enter the string which you want to add, press key number 2");
+                        System.Console.WriteLine("Exit from the loop , press key number 3");
+                        break;
+
                 }
-            System.Console.WriteLine("Enter the Option: ");
-            System.Console.WriteLine("Enter the file name for, press key number 1");
-            System.Console.WriteLine("Enter the string which you want to add, press key number 2");
-            System.Console.WriteLine("Exit from the loop , press key number 3");
-            
-            option = Console.ReadLine();
-            if (option == "3")break;
+
             }
 
         }
